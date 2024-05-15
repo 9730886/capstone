@@ -67,6 +67,29 @@ a, a:active {
     color: blue;
     text-decoration: underline;
 }
+button {
+    padding: 12px;
+
+    width: 200px;
+
+    font: 18px normal;
+    font-family: 'Open Sans', sans-serif;
+
+    background-color: transparent;
+    color: white;
+
+    border: solid white 2px;
+
+    align-self: center;
+
+    transition: 0.3s;
+}
+button:hover {
+    background-color: white;
+    color: black;
+
+    cursor: pointer;
+}
 
 .simulation {
     width: 400px;
