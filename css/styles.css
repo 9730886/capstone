@@ -24,7 +24,9 @@ body {
     gap: 12px;
 }
 header, footer {
-    width: calc(100vw - 32px);
+    box-sizing: border-box;
+    
+    width: 100vw;
     padding: 8px;
 
     background-color: white;
