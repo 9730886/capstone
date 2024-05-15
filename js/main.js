@@ -3,6 +3,8 @@
 const simulationCanvas = document.getElementById("prismSimulation");
 const simulationContext = simulationCanvas.getContext("2d");
 
+const viewReportButton = document.getElementById("viewReport");
+
 const tweenLine = (context, startX, startY, endX, endY, color, time, callback) => {
     context.lineWidth = 2;
 
@@ -71,6 +73,8 @@ const main = () => {
     }
 
     simulationCanvas.addEventListener("click", clickListener);
+
+    viewReportButton.addEventListener("click", () => window.open("https://docs.google.com/document/d/e/2PACX-1vQrFdpzafC_JSXrE63YGgoQHqcCdO51HeAsmqDj_aCXf8vntMbOzBIpGXLcOhZVazSfHPWBJps1hiDb/pub"));
 };
 
 main();
