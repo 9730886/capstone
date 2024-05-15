@@ -75,7 +75,6 @@ a, a:active {
     background-color: transparent;
 
     border: solid white 2px;
-    border-radius: 8px;
 
     flex-shrink: 0;
     flex-grow: 0;
