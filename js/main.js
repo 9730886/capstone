@@ -7,11 +7,9 @@ const tweenLine = (context, startX, startY, endX, endY, color, time, callback) =
     context.lineWidth = 2;
 
     const startTime = performance.now();
-    const duration = startTime + time;
-
     const animate = (currentTime) => {
         const elapsed = currentTime - startTime;
-        const progress = Math.min(elapsed / duration, 1);
+        const progress = Math.min(elapsed / time, 1);
 
         const currentX = startX + (endX - startX) * progress;
         const currentY = startY + (endY - startY) * progress;
@@ -32,7 +30,7 @@ const tweenLine = (context, startX, startY, endX, endY, color, time, callback) =
     }
     
     requestAnimationFrame(animate);
-}
+};
 
 const main = () => {
     simulationContext.lineWidth = 4;
@@ -61,11 +59,11 @@ const main = () => {
             "red", "orange", "yellow", "green", "blue", "purple"
         ];
 
-        tweenLine(simulationContext, 400, 150, 200, 150, "white", 1, () => {
+        tweenLine(simulationContext, 400, 150, 200, 150, "white", 1000, () => {
             let newY = 200;
             for (let i = 0; i < colors.length; i++) {
                 const color = colors[i];
-                tweenLine(simulationContext, 200, 150, 0, newY, color, 1);
+                tweenLine(simulationContext, 200, 150, 0, newY, color, 1000);
 
                 newY += 10;
             }
